@@ -29,7 +29,7 @@ class App extends React.Component {
     return (
       <div>
         <nav className="navbar">
-          <div onClick={this.handleChange} className="col-md-6 offset-md-3">
+          <div className="col-md-6 offset-md-3">
             <Search onQueryChange={this.generateNewData.bind(this)}/>
           </div>
         </nav>

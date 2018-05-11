@@ -4,19 +4,17 @@ class Search extends React.Component {
   }
 
   handleSubmit(event) {
-    event.preventDefault();
-    var text = document.getElementById('search-input').value;
-    this.props.onQueryChange(text);
+    this.props.onQueryChange(event.target.value);
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit.bind(this)} className="search-bar form-inline">
-        <input id="search-input" className="form-control" type="text" />
+      <div className="search-bar form-inline">
+        <input onChange={this.handleSubmit.bind(this)} id="search-input" className="form-control" type="text" />
         <button className="btn hidden-sm-down">
           <span className="glyphicon glyphicon-search"></span>
         </button>
-      </form> 
+      </div> 
     );
   }
 }
